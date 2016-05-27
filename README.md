@@ -29,9 +29,7 @@ width="121" alt="impatient">
 ```shell
 
 $ git clone https://github.com/davidb583/impatient-jekyll
-
 $ npm install
-
 $ gulp
  # ta-da ! the browser launches itself,
  # and will rebuild and live-reload each time you
@@ -54,7 +52,6 @@ $ git push -u origin master
 
 # I suppose you've already run npm install ?
 $ gulp deploy
-
 # ta-da ! your super optimized website
 # can be see at  https://<your_github_name>/<your_repo_name>/
 ```
