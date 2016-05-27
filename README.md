@@ -40,9 +40,6 @@ $ gulp
 
 The website will deploy on branch gh-pages, so create a new repository <your_repo_name> in Github, and add the remote in your project like this :
 
-:warning: Warning :warning:
-
-In `_config.yml`, change `baseurl` property  to `<your_repo_name>`
 
 ```shell
 
