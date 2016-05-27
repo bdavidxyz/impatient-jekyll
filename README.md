@@ -9,7 +9,7 @@ width="121" alt="impatient">
 
 
 <h1 align="center">Impatient-Jekyll</h1>
-<div align="center">Jekyll is the most awesome & most used static website generator.</div><div> But 1) Default dev workflow is <strong>slow</strong> 2) Generated website is <strong>not optimized</strong></div>
+<div align="center">Jekyll is the most awesome & most used static website generator.</div><div align="center"> But 1) Default dev workflow is <strong>slow</strong> 2) Generated website is <strong>not optimized</strong></div>
 <p align="center">Impatient-Jekyll is the perfect solution to this 2 problems.</p>
 
 
@@ -40,6 +40,9 @@ $ gulp
 
 The website will deploy on branch gh-pages, so create a new repository <your_repo_name> in Github, and add the remote in your project like this :
 
+:warning: Warning :warning:
+
+In `_config.yml`, change `baseurl` property  to `<your_repo_name>`
 
 ```shell
 
