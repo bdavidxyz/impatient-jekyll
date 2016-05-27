@@ -64,8 +64,8 @@ There are very minor change compared to plained old Jekyll.
  - A gulpfile.js has been added
  - In config.yml, node artifact have been excluded from jekyll build
  - A folder named "js" contains all javascript files you want.
- - One line has been added to _layout/default.html in order to include the concatenated javascript.
  - Default CSS inclusion in _includes/head.html has been modified to allow inclusion of minified CSS.
+ - One line has been added to _layout/default.html in order to include the concatenated javascript.
 
 
 
