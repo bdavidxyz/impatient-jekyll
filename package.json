@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A starter project including full setup for Jekyll 3, GulpJS, SASS, BrowserSync, and Github pages",
   "main": "gulpfile.js",
+  "engines" : { "node" : "~4.1.2", "npm":"~3.7.5" },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
