@@ -9,7 +9,7 @@ width="121" alt="impatient">
 
 
 <h1 align="center">Impatient-Jekyll</h1>
-<p align="center">Jekyll is the most awesome & most used static website generator. But 1) Default dev workflow is **slow** 2) Generated website is **not optimized**</p>
+<p align="center">Jekyll is the most awesome & most used static website generator. But 1) Default dev workflow is <strong>slow</strong> 2) Generated website is <strong>not optimized</strong></p>
 <p align="center">Impatient-Jekyll is the perfect solution to this 2 problems.</p>
 
 
