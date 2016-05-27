@@ -20,7 +20,7 @@ It has only 2 drawbacks :
  - Dev workflow is slow
  - Production website is not optimized
 
-Speedy-Jekyll is the perfect solution to this 2 problems.
+Impatient-Jekyll is the perfect solution to this 2 problems.
 
 ## Key benefits
 
