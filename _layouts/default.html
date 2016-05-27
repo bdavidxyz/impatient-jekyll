@@ -14,9 +14,8 @@
     </div>
 
     {% include footer.html %}
-    {% assign link_to_js_file = '' | append:{{site.baseurl}} | append:'/' | append:'public/js/all.min.js' %}
-    <script src="{{link_to_js_file}}"></script>
-    <script src="{{ "public/js/all.min.js" | prepend: site.baseurl }}"></script>
+
+    <script src="{{'public/js/all.min.js'}}"></script>
   </body>
 
 </html>
