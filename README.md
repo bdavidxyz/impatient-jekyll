@@ -1,0 +1,105 @@
+
+<p align="center">
+
+<img align="center" src="http://res.cloudinary.com/toutuncafe/image/upload/c_scale,w_62/v1464290677/going-to-work_xpo4ji.svg"
+width="121" alt="impatient">
+
+</p>
+
+
+
+<h1 align="center">Impatient-Jekyll</h1>
+<p align="center">The default Jekyll theme, on (a)steroid</p>
+
+
+## About
+
+Jekyll is the most awesome & most used static website generator.
+
+It has only 2 drawbacks :
+ - Dev workflow is slow
+ - Production website is not optimized
+
+Speedy-Jekyll is the perfect solution to this 2 problems.
+
+## Key benefits
+
+ - **Launch fast** - Stop looking for the right URL in your browser, when launching the tool the browser open the right tab with the right URL just for you.
+ - **Work fast** - Stop refreshing your browser on each file change. Any CSS, JS and HTML will be automagically reflected in your browser.
+ - **Reduce bounce rate** - By default : 99/100 at the Google [Page Speed Insight](https://developers.google.com/speed/pagespeed/insights/), and a top 1% website at [webpagetest.org](http://www.webpagetest.org/). Keep this in mind while developing and no customer will leave your website because of slowness.
+ - **Capitalize your knowledge** - A normal Jekyll build is run on each file change, so it does NOT act as a replacement. _The magic build occurs **after** the normal jekyll build_. You can still benefits from any ruby-based configuration, plugins, templating, etc that you previously enjoyed.
+
+## How to use it
+
+### Prerequisite
+
+
+ - [Chrome](https://www.google.com/chrome/) - use the installer
+ - [Jekyll](https://jekyllrb.com/) - ```$ gem install jekyll```
+ - [NodeJS](https://nodejs.org/en/download/) - use the installer.
+ - [GulpJS](http://gulpjs.com/GulpJS) - ```$ npm install -g gulp ```
+
+### Dev mode
+
+```shell
+
+$ git clone https://github.com/davidb583/impatient-jekyll
+
+$ npm install
+
+$ gulp
+ # ta-da ! the browser launches itself,
+ # and will rebuild and live-reload each time you
+ # change a CSS, JS, or HTML file
+```
+
+### Production mode
+
+The website will deploy on branch gh-pages, so create a new repository <your_repo_name> in Github, and add the remote in your project like this :
+
+
+```shell
+
+# be sure you start from a fresh GitHub state
+$ rm -rf .git
+$ git init
+$ git add . && git commit -m 'initial commit'
+$ git remote add origin git@github.com:<your_github_name>/<your_repo_name>.git
+$ git push -u origin master
+
+# I suppose you've already run npm install ?
+$ gulp deploy
+
+# ta-da ! your super optimized website
+# can be see at  https://<your_github_name>/<your_repo_name>/
+```
+
+
+## How to customize it
+
+There are very minor change compared to plained old Jekyll.
+
+ - A gulpfile.js has been added
+ - In config.yml, node artifact have been excluded from jekyll build
+ - A folder named "js" contains all javascript files you want.
+ - One line has been added to _layout/default.html in order to include the concatenated javascript.
+
+ That's all ! So diving into source code to get the featurette you want should not be a big deal. If it is, just write me an email, I'll be glad to help you : davbohr at gmail dot com
+
+## Limitations
+
+As you may have noticed, the build does treat image. I strongly recommend the 2 following options :
+- Rely on an external service like [cloudinary](https://cloudinary.com/)
+- Use SVG as much as possible
+
+Remember that speed is the goal of the tool:)
+
+## Special Thanks
+
+I used the following resources to achieve the tools :
+
+ - [Dimitri Koenig, Scoring 100 on google's page speed insights]( https://www.dimitrikoenig.net/scoring-100-on-googles-pagespeed-insights.html)
+ - [Shane Osbourne, jekyll-gulp-sass-browser-sync](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync)
+ - [Aaron Lasseigne, using gulp with jekyll](http://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
+ - [Elle Kasai, Shiori theme](https://github.com/ellekasai/shiori)
+ - [freepik from Flaticon, authored the icon](http://www.flaticon.com/authors/freepik)
