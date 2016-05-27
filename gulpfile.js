@@ -11,7 +11,7 @@ var replace      = require('gulp-replace');
 var notify       = require('gulp-notify');
 var prefix       = require('gulp-autoprefixer');
 var cp           = require('child_process');
-var fs           = require("fs");
+var fs           = require('fs');
 var ghPages      = require('gulp-gh-pages');
 var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages     = {
@@ -23,9 +23,10 @@ var messages     = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', '--config', '_config.dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
+
 
 
 /**
@@ -101,6 +102,11 @@ gulp.task('default', ['browser-sync', 'watch']);
 /**
 * Create production-ready website
 */
+gulp.task('jekyll-build-prod', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn( jekyll , ['build', '--config', '_config.prod.yml'], {stdio: 'inherit'})
+        .on('close', done);
+});
 gulp.task('optimize-css-prod', ['jekyll-build'], function () {
     return gulp.src('_site/css/main.css')
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -145,7 +151,7 @@ gulp.task('push-to-gh-pages', ['optimize-html-prod'], function() {
     .pipe(ghPages());
 });
 gulp.task('deploy',
-  ['jekyll-build',
+  ['jekyll-build-prod',
     'optimize-css-prod',
     'optimize-js-prod',
     'optimize-html-prod',
