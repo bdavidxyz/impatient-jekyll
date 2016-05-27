@@ -9,25 +9,10 @@ width="121" alt="impatient">
 
 
 <h1 align="center">Impatient-Jekyll</h1>
-<p align="center">The default Jekyll theme, on (a)steroid</p>
+<p align="center">Jekyll is the most awesome & most used static website generator. But 1) Default dev workflow is **slow** 2) Generated website is **not optimized**</p>
+<p align="center">Impatient-Jekyll is the perfect solution to this 2 problems.</p>
 
 
-## About
-
-Jekyll is the most awesome & most used static website generator.
-
-It has only 2 drawbacks :
- - Dev workflow is slow
- - Production website is not optimized
-
-Impatient-Jekyll is the perfect solution to this 2 problems.
-
-## Key benefits
-
- - **Launch fast** - Stop looking for the right URL in your browser, when launching the tool the browser open the right tab with the right URL just for you.
- - **Work fast** - Stop refreshing your browser on each file change. Any CSS, JS and HTML will be automagically reflected in your browser.
- - **Reduce bounce rate** - By default : 99/100 at the Google [Page Speed Insight](https://developers.google.com/speed/pagespeed/insights/), and a top 1% website at [webpagetest.org](http://www.webpagetest.org/). Keep this in mind while developing and no customer will leave your website because of slowness.
- - **Capitalize your knowledge** - A normal Jekyll build is run on each file change, so it does NOT act as a replacement. _The magic build occurs **after** the normal jekyll build_. You can still benefits from any ruby-based configuration, plugins, templating, etc that you previously enjoyed.
 
 ## How to use it
 
