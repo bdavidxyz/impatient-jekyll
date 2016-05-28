@@ -107,7 +107,7 @@ gulp.task('jekyll-build-prod', function (done) {
     return cp.spawn( jekyll , ['build', '--config', '_config.prod.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
-gulp.task('optimize-css-prod', ['jekyll-build'], function () {
+gulp.task('optimize-css-prod', ['jekyll-build-prod'], function () {
     return gulp.src('_site/css/main.css')
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(uncss({
