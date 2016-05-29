@@ -2,53 +2,115 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home container">
 
-  <div class="text-xs-center">
-    <div class="container">
-      <h1 class="display-3">Docs of impatient-jekyll</h1>
-      <div class="separator m-b-3"></div>
-      <p class="lead"> Some text here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quae voluptate voluptates similique, repellat magni laborum dignissimos saepe aliquid, iure nihil cum pariatur dolorum. Vel inventore ea odit obcaecati consequatur!</p>
-      <p class="lead"> Some other text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestias inventore magnam sunt voluptate earum aperiam reiciendis qui, sit commodi nulla beatae. Recusandae cumque tempore est reprehenderit consequatur vero neque!</p>
-      <div class="separator m-b-3"></div>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">View docs and demo »</a></p>
-    </div>
+  <div class="row">
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
   </div>
-
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-6">.col-md-6</div>
+  </div>
 
   <div class="separator m-b-3"></div>
 
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
 
-  <div class="text-xs-center">
-    <div class="container">
-      <h2 class="">Another section</h2>
-      <div class="separator m-b-3"></div>
-      <p class="lead"> Some text here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quae voluptate voluptates similique, repellat magni laborum dignissimos saepe aliquid, iure nihil cum pariatur dolorum. Vel inventore ea odit obcaecati consequatur!</p>
-      <p class="lead"> Some other text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestias inventore magnam sunt voluptate earum aperiam reiciendis qui, sit commodi nulla beatae. Recusandae cumque tempore est reprehenderit consequatur vero neque!</p>
-    </div>
-  </div>
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
 
-  <div class="container text-xs-center">
-      <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-8">
-          <h2 class="display-7">Another section</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-md-2">
-        </div>
-      </div>
-
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-      </div>
-    </div>
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-xs-6">.col-xs-6</div>
+  <div class="col-xs-6">.col-xs-6</div>
+</div>
 
 
+
+<div class="separator m-b-3"></div>
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  <!-- Optional: clear the XS cols if their content doesn't match in height -->
+  <div class="clearfix hidden-sm-up"></div>
+  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+</div>
+
+
+
+<div class="separator m-b-3"></div>
+
+
+<div class="row">
+  <div class="col-xs-9">.col-xs-9</div>
+  <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+</div>
+
+<div class="separator m-b-3"></div>
+
+
+<div class="row">
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+  <!-- Add the extra clearfix for only the required viewport -->
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+</div>
+
+
+
+<div class="separator m-b-3"></div>
+
+
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4 offset-md-4">.col-md-4 .col-md-offset-4</div>
+</div>
+<div class="row">
+  <div class="col-md-3 offset-md-3">.col-md-3 .col-md-offset-3</div>
+  <div class="col-md-3 offset-md-3">.col-md-3 .col-md-offset-3</div>
+</div>
+<div class="row">
+  <div class="col-md-6 offset-md-3">.col-md-6 .col-md-offset-3</div>
+</div>
 
 </div>
