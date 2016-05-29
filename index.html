@@ -4,20 +4,22 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="jumbotron text-xs-center" style='background-color:white'>
+        <div class="container">
+          <h1 class="display-3">Docs of impatient-jekyll</h1>
+          <div class="separator m-b-3"></div>
+          <p class="lead"> Some text here</p>
+          <p class="lead"> Some other text.</p>
+          <div class="separator m-b-3"></div>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">View docs and demo »</a></p>
+        </div>
+      </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="separator m-b-3"></div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
+
 
 </div>
