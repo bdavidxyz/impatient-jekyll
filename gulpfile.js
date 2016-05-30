@@ -57,8 +57,7 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
         .pipe(rename('all.min.css'))
         .pipe(gulp.dest('_site/public/css'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('public/css'))
-        .pipe(notify({ message: 'CSS task complete' }));
+        .pipe(gulp.dest('public/css'));
 });
 
 
@@ -68,14 +67,12 @@ gulp.task('optimize-js', ['optimize-css'], function() {
     //.pipe(uglify())
     .pipe(gulp.dest('_site/public/js'))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('public/js'))
-    .pipe(notify({ message: 'JS task complete' }));
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('optimize-html', ['optimize-js'], function() {
 	return gulp.src('_site/**/*.html')
-		.pipe(gulp.dest('_site/'))
-    .pipe(notify({ message: 'HTML task complete' }));
+		.pipe(gulp.dest('_site/'));
 });
 
 /**
