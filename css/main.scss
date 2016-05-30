@@ -3,5 +3,10 @@
 ---
 @charset "utf-8";
 
+@font-face {
+  font-family: 'aileron';
+  src: url('{{site.baseurl}}/fonts/aileron/Aileron-Regular.otf');
+}
+
 
 @import "bootstrap";
