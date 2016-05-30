@@ -4,8 +4,13 @@
 @charset "utf-8";
 
 @font-face {
-  font-family: 'aileron';
+  font-family: 'Aileron-Regular';
   src: url('{{site.baseurl}}/fonts/aileron/Aileron-Regular.otf');
+}
+@font-face {
+  font-family: 'Aileron-Heavy';
+  font-weight: 700;
+  src: url('{{site.baseurl}}/fonts/aileron/Aileron-Heavy.otf');
 }
 
 
