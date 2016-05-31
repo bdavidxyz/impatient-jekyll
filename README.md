@@ -8,7 +8,7 @@
 
 
 
-## [View Demos and Documentation &rarr;](http://davidb583.github.io/impatient-jekyll)
+## [View demos and full documentation &rarr;](http://davidb583.github.io/impatient-jekyll)
 
 ## How to use it
 
@@ -20,8 +20,6 @@
  - [NodeJS](https://nodejs.org/en/download/) - use the installer.
  - [GulpJS](http://gulpjs.com/GulpJS) - ```$ npm install -g gulp ```
 
-
-### Prerequisite
 
 Versions I used : node 4.1.2, npm 3.7.5, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
 
