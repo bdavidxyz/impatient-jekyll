@@ -4883,7 +4883,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .p-b-1, .mycode {
   padding-bottom: 1rem !important; }
 
-.p-l-1, .mycode {
+.p-l-1, .mycode, .player__text {
   padding-left: 1rem !important; }
 
 .p-x-1 {
@@ -5102,7 +5102,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .text-xs-right {
   text-align: right !important; }
 
-.text-xs-center {
+.text-xs-center, .player {
   text-align: center !important; }
 
 @media (min-width: 544px) {
@@ -5278,3 +5278,13 @@ body {
 
 .mycode__comment {
   color: #9C9E9C; }
+
+.player {
+  display: flex;
+  cursor: pointer; }
+
+.player__text {
+  align-self: center;
+  color: #3366CC; }
+  .player__text:hover {
+    text-decoration: underline; }
