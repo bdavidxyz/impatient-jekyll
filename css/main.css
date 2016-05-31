@@ -5268,6 +5268,9 @@ a.text-danger:focus, a.text-danger:hover {
 body {
   border-top: 5px solid #3366CC; }
 
+code {
+  color: #3366CC; }
+
 .mycode {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 90%;
