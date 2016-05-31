@@ -25,11 +25,12 @@ layout: default
     </p>
     <div class="separator m-b-4"></div>
     <p>
-      <a class="btn btn-lg btn-secondary" href='#demos'>
+      <a class="btn btn-lg btn-secondary separator m-b-1" href='#demos'>
         &#x25BA; Watch demos
       </a>
-      <a class="btn btn-lg btn-primary" href='https://github.com/davidb583/impatient-jekyll' target='_blank'>
-        Download on GitHub →
+      <a class="btn btn-lg btn-primary separator m-b-1" href='https://github.com/davidb583/impatient-jekyll' target='_blank'>
+        <span class='hidden-xs-down'>Download on GitHub →</span>
+        <span class='hidden-sm-up'>GitHub →</span>
       </a>
     </p>
   </div>
@@ -39,7 +40,7 @@ layout: default
 
 
 
-<div class="separator m-b-6"></div>
+<div class="separator m-b-5"></div>
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <h2 class='text-xs-center'>
@@ -211,13 +212,31 @@ layout: default
   <div class="col-md-6 offset-md-3">
     <h2 class='text-xs-center'>
       <div>
-        How it <span class='text-primary'>works</span> ?
+        How does it <span class='text-primary'>works</span> ?
       </div>
     </h2>
     <p>
-      And a lead, convincing description.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      In dev mode
     </p>
+    <ol class="li">1. A <strong>normal jekyll build</strong> occurs</ol>
+    <ol class="li">
+      <div>2. CSS files are concatenated in one single file,</div>
+      <div>but not minified, handy for debugging.</div>
+    </ol>
+    <ol class="li">
+      <div>3. JS files are concatenated in one single file,</div>
+      <div>but not minified, handy for debugging.</div>
+    </ol>
+    <ol class="li">4. <strong>browserSync</strong> launches the browser automatically</ol>
+    <ol class="li">5. A <strong>gulp</strong> task watch all project's file, and relaunch all previous step above automatically, no need to refresh the browser !</ol>
+    <p>
+      Production mode works with Github gh-pages
+    </p>
+    <ol class="li">1. A <strong>normal jekyll build</strong> occurs</ol>
+    <ol class="li">2. CSS are concatenated, minified, and inlined inside HTML</ol>
+    <ol class="li">3. JS files are concatenated, minified, and inlined inside HTML</ol>
+    <ol class="li">4. HTML is compressed</ol>
+    <ol class="li">5. The whole _site directory is pushed to the github repository, on branch <i>gh-pages</i></ol>
   </div>
 </div>
 
@@ -233,8 +252,23 @@ layout: default
         How to <span class='text-primary'>customize</span> it ?
       </div>
     </h2>
+    <div class="separator m-b-2"></div>
     <p>
       There are very few changes compared to a plain old jekyll v3 project
+    </p>
+    <div class="separator m-b-3"></div>
+    <h3>Jekyll configuration</h3>
+    <p>
+      <div><code>_config.yml</code> is splitted into 2 different confs :  </div>
+      <div><code>_config.dev.yml</code> and <code>_config.prod.yml</code></div>
+      <div>Their content must comply to standard jekyll configuration.</div>
+    </p>
+    <div class="separator m-b-3"></div>
+    <h3>Task automation</h3>
+    <p>
+      <div><code>gulpfile.js</code> is where automation happens,</div>
+      <div><code>package.json</code> and <code>node_modules/</code> folder</div>
+      <div>are only here for the gulpfile to work properly</div>
     </p>
   </div>
 </div>

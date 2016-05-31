@@ -64,7 +64,6 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
 gulp.task('optimize-js', ['optimize-css'], function() {
   return gulp.src('js/*.js')
     .pipe(concat('all.min.js'))
-    //.pipe(uglify())
     .pipe(gulp.dest('_site/public/js'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('public/js'));
