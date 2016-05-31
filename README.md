@@ -28,6 +28,7 @@ Versions I used : node 4.1.2, npm 3.7.5, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
 ```shell
 
 $ git clone https://github.com/davidb583/impatient-jekyll
+$ cd impatient-jekyll
 $ npm install
 $ gulp
  # ta-da ! the browser launches itself,
