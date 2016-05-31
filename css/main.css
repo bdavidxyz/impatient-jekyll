@@ -5273,7 +5273,8 @@ body {
   font-size: 90%;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  word-wrap: break-word; }
 
 .mycode__comment {
   color: #9C9E9C; }
