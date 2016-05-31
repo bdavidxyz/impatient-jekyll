@@ -37,3 +37,18 @@ body {
 .mycode__comment {
   color:#9C9E9C;
 }
+
+.player {
+  @extend .text-xs-center;
+  display: flex;
+  cursor: pointer;
+}
+
+.player__text {
+  @extend .p-l-1;
+  align-self: center;
+  color: $brand-primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}
