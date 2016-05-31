@@ -65,4 +65,5 @@ I used the following resources to achieve the tools :
  - [Dimitri Koenig, Scoring 100 on google's page speed insights]( https://www.dimitrikoenig.net/scoring-100-on-googles-pagespeed-insights.html)
  - [Shane Osbourne, jekyll-gulp-sass-browser-sync](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync)
  - [Aaron Lasseigne, using gulp with jekyll](http://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/)
- - [Elle Kasai, Shiori theme](https://github.com/ellekasai/shiori)
+ - [Elle Kasai, How to market micro open-source projects](https://speakerdeck.com/ellekasai/how-to-market-micro-open-source-projects)
+ - [Christophe Porteneuve, conference@ParisWeb2015](https://www.paris-web.fr/2015/conferences/le-dev-front-a-mach-1-au-quotidien.php)
