@@ -20,6 +20,10 @@ body {
   border-top: 5px solid $brand-primary;
 }
 
+code {
+  color: $brand-primary;
+}
+
 .mycode {
   font-family: $font-family-monospace;
   font-size: $code-font-size;
