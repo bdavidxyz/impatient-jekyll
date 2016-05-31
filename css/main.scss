@@ -32,6 +32,7 @@ body {
   @extend .p-t-1;
   @extend .p-l-1;
   @extend .p-b-1;
+  word-wrap: break-word;
 }
 .mycode__comment {
   color:#9C9E9C;
