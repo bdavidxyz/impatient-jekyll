@@ -110,7 +110,6 @@ layout: default
       <div class='mycode__comment'>
         # It rocks !!
       </div>
-
     </div>
   </div>
 </div>
@@ -270,6 +269,24 @@ layout: default
       <div><code>package.json</code> and <code>node_modules/</code> folder</div>
       <div>are only here for the gulpfile to work properly</div>
     </p>
+    <div class="separator m-b-3"></div>
+    <h3>Custom assets</h3>
+    <p>
+      <div>What if you want more than CSS & JS ? Maybe fonts or image ? </div>
+      <div>Let's see an example with font Montserrat. </div>
+      <div>Simply insert <code>fonts/Montserrat.oft</code> at the root.</div>
+      <div>And the following code inside <code>css/main.scss</code></div>
+      <div class="separator m-b-1"></div>
+      <div class='mycode'>
+        <div>@font-face {</div>
+          <div>&nbsp;&nbsp;font-family: 'Montserrat-Light';</div>
+          <div>&nbsp;&nbsp;src: url('&#123;&#123;site.baseurl&#125;&#125;/fonts/Montserrat-Light.otf');</div>
+        <div>}</div>
+      </div>
+      <div class="separator m-b-1"></div>
+      <div>Note the use of <code>site.baseurl</code> to retrieve the font</div>
+
+    </p>
   </div>
 </div>
 
@@ -279,13 +296,19 @@ layout: default
   <div class="col-md-6 offset-md-3">
     <h2 class='text-xs-center'>
       <div>
-        <span class='text-primary'>Example</span> use case
+        The <span class='text-primary'>Story</span> behind impatient-jekyll
       </div>
     </h2>
-    <p>
-      And a lead, convincing description.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="separator m-b-2"></div>
+    <p>I already knew and used Jekyll in the past (mostly v2).</p>
+    <p>Then I worked for front-end projects with all modern tooling like webpack, browsersync, etc.</p>
+    <p>Back to Jekyll (v3), I couldn't believe that the default build command still be so painful to the developer, and that the final build had such a very low score at Google Page Speed Insight.</p>
+    I started to google around, and found very clever approaches here and there, but none of them combined the full workflow I needed </p>
+    <ul>
+      <li>Respect the default Jekyll build, it allows to inject any user-defined vars into SCSS and template.</li>
+      <li>Have all the JS and CSS livereloaded, and allow to easily add any other assets</li>
+      <li>Have a skyrocketing score at Google Page Speed Insight. Without a healthy build when starting your project, you end up with a performance optimization nightmare.</li>
+    </ul>
   </div>
 </div>
 
