@@ -13,6 +13,9 @@ var prefix       = require('gulp-autoprefixer');
 var cp           = require('child_process');
 var fs           = require('fs');
 var ghPages      = require('gulp-gh-pages');
+var extract      = require('gulp-html-extract');
+var dedupe = require('gulp-dedupe');
+var crisper      = require('gulp-crisper');
 var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages     = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -56,23 +59,27 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
         .pipe(rename('all.min.css'))
         .pipe(gulp.dest('_site/public/css'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('public/css'))
         .pipe(notify({ message: 'CSS task complete' }));
 });
 
 
 gulp.task('optimize-js', ['optimize-css'], function() {
-  return gulp.src('js/*.js')
-    .pipe(concat('all.min.js'))
-    //.pipe(uglify())
-    .pipe(gulp.dest('_site/public/js'))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('public/js'))
-    .pipe(notify({ message: 'JS task complete' }));
+     return gulp
+        .src("_site/index.html")
+        .pipe(extract())
+        .pipe(concat('all.min.js'))
+        //.pipe(uglify())
+        .pipe(gulp.dest('_site/public/js'))
+        .pipe(browserSync.reload({stream:true}))
+
 });
 
 gulp.task('optimize-html', ['optimize-js'], function() {
 	return gulp.src('_site/**/*.html')
+    .pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
+      var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
+      return '<script type="text/javascript">' + js_script + '</script>';
+    }))
 		.pipe(gulp.dest('_site/'))
     .pipe(notify({ message: 'HTML task complete' }));
 });
@@ -123,11 +130,11 @@ gulp.task('optimize-css-prod', ['jekyll-build-prod'], function () {
 });
 gulp.task('optimize-js-prod', ['optimize-css-prod'], function() {
   return gulp.src('js/*.js')
-    .pipe(concat('all.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('_site/public/js'))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('public/js'))
+        .src("_site/index.html")
+        .pipe(extract())
+        .pipe(concat('all.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('_site/public/js'))
     .pipe(notify({ message: 'JS-PROD task complete' }));
 });
 gulp.task('optimize-html-prod', ['optimize-js-prod'], function() {

@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "A starter project including full setup for Jekyll 3, GulpJS, SASS, BrowserSync, and Github pages",
   "main": "gulpfile.js",
-  "engines" : { "node" : "~4.1.2", "npm":"~3.7.5" },
+  "engines": {
+    "node": "~4.1.2",
+    "npm": "~3.7.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +16,12 @@
     "browser-sync": "2.12.8",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "3.1.0",
-    "gulp-concat": "2.6.0",
-    "gulp-gh-pages": "0.5.4",
     "gulp-clean-css": "2.0.8",
+    "gulp-concat": "2.6.0",
+    "gulp-crisper": "^1.1.0",
+    "gulp-dedupe": "0.0.2",
+    "gulp-gh-pages": "0.5.4",
+    "gulp-html-extract": "0.1.0",
     "gulp-minify-html": "1.0.6",
     "gulp-notify": "2.2.0",
     "gulp-rename": "1.2.2",
