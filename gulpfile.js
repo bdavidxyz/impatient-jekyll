@@ -65,23 +65,24 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
 
 gulp.task('optimize-js', ['optimize-css'], function() {
      return gulp
-        .src("_site/index.html")
-        .pipe(extract())
-        .pipe(concat('all.min.js'))
-        //.pipe(uglify())
-        .pipe(gulp.dest('_site/public/js'))
-        .pipe(browserSync.reload({stream:true}))
+        // .src("_site/index.html")
+        // .pipe(extract())
+        // .pipe(concat('all.min.js'))
+        // //.pipe(uglify())
+        // .pipe(gulp.dest('_site/public/js'))
+        // .pipe(browserSync.reload({stream:true}))
 
 });
 
 gulp.task('optimize-html', ['optimize-js'], function() {
-	return gulp.src('_site/**/*.html')
-    .pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
-      var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
-      return '<script type="text/javascript">' + js_script + '</script>';
-    }))
-		.pipe(gulp.dest('_site/'))
-    .pipe(notify({ message: 'HTML task complete' }));
+	return gulp
+  // .src('_site/**/*.html')
+  //   .pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
+  //     var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
+  //     return '<script type="text/javascript">' + js_script + '</script>';
+  //   }))
+		// .pipe(gulp.dest('_site/'))
+  //   .pipe(notify({ message: 'HTML task complete' }));
 });
 
 /**
@@ -125,31 +126,31 @@ gulp.task('optimize-css-prod', ['jekyll-build-prod'], function () {
         .pipe(minifyCSS())
         .pipe(gulp.dest('_site/public/css'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('public/css'))
         .pipe(notify({ message: 'CSS-PROD task complete' }));
 });
 gulp.task('optimize-js-prod', ['optimize-css-prod'], function() {
-  return gulp.src('js/*.js')
-        .src("_site/index.html")
-        .pipe(extract())
-        .pipe(concat('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('_site/public/js'))
-    .pipe(notify({ message: 'JS-PROD task complete' }));
+  return gulp
+            .src("_site/index.html")
+            .pipe(extract())
+            .pipe(concat('all.min.js'))
+            .pipe(uglify())
+            .pipe(gulp.dest('_site/public/js'))
+            .pipe(notify({ message: 'JS-PROD task complete' }));
 });
 gulp.task('optimize-html-prod', ['optimize-js-prod'], function() {
 	return gulp.src('_site/**/*.html')
-  .pipe(minifyHTML({
-    quotes: true
-  }))
+
 		.pipe(replace(/<link rel=\"stylesheet\" href=\"\/public\/css\/all.min.css\"[^>]*>/, function(s) {
 			var style = fs.readFileSync('_site/public/css/all.min.css', 'utf8');
 			return '<style>' + style + '</style>';
 		}))
-		.pipe(replace(/<script src=\"\/public\/js\/all.min.js\"[^>]*><\/script>/, function(s) {
+		.pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
 			var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
 			return '<script type="text/javascript">' + js_script + '</script>';
 		}))
+    .pipe(minifyHTML({
+      quotes: true
+    }))
 		.pipe(gulp.dest('_site/'))
     .pipe(notify({ message: 'HTML-PROD task complete' }));
 });
