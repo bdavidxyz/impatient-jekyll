@@ -18,8 +18,6 @@
     "gulp-autoprefixer": "3.1.0",
     "gulp-clean-css": "2.0.8",
     "gulp-concat": "2.6.0",
-    "gulp-crisper": "^1.1.0",
-    "gulp-dedupe": "0.0.2",
     "gulp-gh-pages": "0.5.4",
     "gulp-html-extract": "0.1.0",
     "gulp-minify-html": "1.0.6",

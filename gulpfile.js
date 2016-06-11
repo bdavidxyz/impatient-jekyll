@@ -64,25 +64,11 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
 
 
 gulp.task('optimize-js', ['optimize-css'], function() {
-     return gulp
-        // .src("_site/index.html")
-        // .pipe(extract())
-        // .pipe(concat('all.min.js'))
-        // //.pipe(uglify())
-        // .pipe(gulp.dest('_site/public/js'))
-        // .pipe(browserSync.reload({stream:true}))
-
+     return gulp;
 });
 
 gulp.task('optimize-html', ['optimize-js'], function() {
-	return gulp
-  // .src('_site/**/*.html')
-  //   .pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
-  //     var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
-  //     return '<script type="text/javascript">' + js_script + '</script>';
-  //   }))
-		// .pipe(gulp.dest('_site/'))
-  //   .pipe(notify({ message: 'HTML task complete' }));
+	return gulp;
 });
 
 /**
