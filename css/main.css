@@ -2,6 +2,9 @@
   font-family: 'Montserrat-Light';
   src: url("/impatient-jekyll/fonts/Montserrat-Light.otf"); }
 @font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("/impatient-jekyll/fonts/Montserrat-Regular.otf"); }
+@font-face {
   font-family: 'BodoniFLF-Italic';
   src: url("/impatient-jekyll/fonts/BodoniFLF-Italic.ttf"); }
 /*!
@@ -68,7 +71,8 @@ strong {
 
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+  font-family: "Montserrat-Regular"; }
 
 dfn {
   font-style: italic; }
