@@ -21,7 +21,7 @@
  - [GulpJS](http://gulpjs.com/GulpJS) - ```$ npm install -g gulp ```
 
 
-Versions I used : node 4.1.2, npm 3.7.5, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
+Versions I used : node 5.11.1, npm 3.8.6, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
 
 ### Dev mode
 
