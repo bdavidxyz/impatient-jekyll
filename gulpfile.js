@@ -14,8 +14,6 @@ var cp           = require('child_process');
 var fs           = require('fs');
 var ghPages      = require('gulp-gh-pages');
 var extract      = require('gulp-html-extract');
-var dedupe = require('gulp-dedupe');
-var crisper      = require('gulp-crisper');
 var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages     = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -26,7 +24,7 @@ var messages     = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', '--config', '_config.dev.yml'], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', '--config', '_config.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -59,7 +57,6 @@ gulp.task('optimize-css', ['jekyll-build'], function () {
         .pipe(rename('all.min.css'))
         .pipe(gulp.dest('_site/public/css'))
         .pipe(browserSync.reload({stream:true}))
-        .pipe(notify({ message: 'CSS task complete' }));
 });
 
 
@@ -98,7 +95,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 */
 gulp.task('jekyll-build-prod', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', '--config', '_config.prod.yml'], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', '--config', '_config.yml', '_config.prod.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 gulp.task('optimize-css-prod', ['jekyll-build-prod'], function () {
