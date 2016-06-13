@@ -165,7 +165,7 @@ layout: default
 
 
       <div class="separator m-b-2"></div>
-      <a href="http://g.recordit.co/JuZDPfbr4m.gif" target='_blank' style="display:block">
+      <a href="https://youtu.be/JIYSIiRH9kQ" target='_blank' style="display:block">
         <div class='player'  >
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 58 58" width='38px' height='38px' style="enable-background:new 0 0 58 58;" xml:space="preserve">
             <circle style="fill:#3366CC;" cx="29" cy="29" r="29"/>
@@ -266,22 +266,21 @@ layout: default
     </p>
     <ol class="li">1. A <strong>normal jekyll build</strong> occurs</ol>
     <ol class="li">
-      <div>2. CSS files are concatenated in one single file,</div>
+      <div>2. CSS files are compiled & concatenated in one single file,</div>
       <div>but not minified, handy for debugging.</div>
     </ol>
     <ol class="li">
-      <div>3. JS files are concatenated in one single file,</div>
-      <div>but not minified, handy for debugging.</div>
+      <div>3. JS files are left "as is", handy for debugging.</div>
     </ol>
     <ol class="li">4. <strong>browserSync</strong> launches the browser automatically</ol>
-    <ol class="li">5. A <strong>gulp</strong> task watch all project's file, and relaunch all previous step above automatically, no need to refresh the browser !</ol>
+    <ol class="li">5. A <strong>gulp</strong> task watch all project's file. If you change & save a file, it relaunches all previous steps above automatically, no need to refresh the browser !</ol>
     <p>
       Production mode works with Github gh-pages
     </p>
     <ol class="li">1. A <strong>normal jekyll build</strong> occurs</ol>
-    <ol class="li">2. CSS are concatenated, minified, and inlined inside HTML</ol>
-    <ol class="li">3. JS files are concatenated, minified, and inlined inside HTML</ol>
-    <ol class="li">4. HTML is compressed</ol>
+    <ol class="li">2. CSS are concatenated, minified, unused CSS are removed, remaining CSS are inlined inside HTML, in the head part.</ol>
+    <ol class="li">3. JS files are concatenated, minified, and inlined inside HTML, just before the body closing tag.</ol>
+    <ol class="li">4. HTML is compressed.</ol>
     <ol class="li">5. The whole _site directory is pushed to the github repository, on branch <i>gh-pages</i></ol>
   </div>
 </div>
@@ -305,9 +304,8 @@ layout: default
     <div class="separator m-b-3"></div>
     <h3>Jekyll configuration</h3>
     <p>
-      <div><code>_config.yml</code> is splitted into 2 different confs :  </div>
-      <div><code>_config.dev.yml</code> and <code>_config.prod.yml</code></div>
-      <div>Their content must comply to standard jekyll configuration.</div>
+      <div>In addition to the regular <code>_config.yml</code>, </div>
+      <div><code>_config.prod.yml</code> is added for production-only variables.</div>
     </p>
     <div class="separator m-b-3"></div>
     <h3>Task automation</h3>
@@ -315,9 +313,53 @@ layout: default
       <div><code>gulpfile.js</code> is where automation happens,</div>
       <div><code>package.json</code> and <code>node_modules/</code> folder</div>
       <div>are only here for the gulpfile to work properly</div>
+      <div class="separator m-b-1"></div>
+      <div>Feel free to modify the gulpfile as you wish. </div>
     </p>
+
+
     <div class="separator m-b-3"></div>
-    <h3>Custom assets</h3>
+    <h3>Add a CSS file</h3>
+    <p>
+      <div>In dev mode there are no difference with Jekyll. </div>
+      <div class="separator m-b-1"></div>
+      <div>Just as a reminder : css/main.scss is the main entry point. </div>
+      <div>In this file <strong>you can inject user-defined properties</strong>  - a property in _config.yml can be avaible in this file by injecting a template like this : &#123;&#123;site.main_color&#125;&#125;</div>
+      <div> </div>
+    </p>
+
+
+    <div class="separator m-b-3"></div>
+    <h3>Add a JavaScript file</h3>
+    <p>
+      <div>To add a JavaScript file to your project, add an HTML file into the <code>_includes/</code> folder, and write JS inside a script tag, like this : </div>
+      <div class="separator m-b-1"></div>
+      <div class='mycode'>
+        <div>&#60;script type="text/javascript"&#62;</div>
+        <div>&nbsp;&nbsp;&#47;&#47;&nbsp;any JS here...</div>
+        <div>&#60;script&#47;&#62;</div>
+      </div>
+      <div class="separator m-b-1"></div>
+      <div>Doing so will allow you to inject user-defined properties, the same way as CSS above.</div>
+      <div class="separator m-b-1"></div>
+      <div>Then, add the file to <code>_layout/default</code> like this </div>
+      <div class="separator m-b-1"></div>
+      <div class='mycode'>
+        <div>&#60;&#33;--startjs--&#62;</div>
+        <div>&#123;&#37; include my-js-file.html &#37;&#125;</div>
+        <div>&#60;&#33;--endjs--&#62;</div>
+      </div>
+      <div class="separator m-b-1"></div>
+      <div>Note the startjs and endjs comments : any JS between these will be optimized in production</div>
+  </p>
+
+
+
+
+
+
+  <div class="separator m-b-3"></div>
+    <h3>Add any assets, other than CSS & JS </h3>
     <p>
       <div>What if you want more than CSS & JS ? Maybe fonts or image ? </div>
       <div>Let's see an example with font Montserrat. </div>
@@ -332,9 +374,9 @@ layout: default
       </div>
       <div class="separator m-b-1"></div>
       <div>Note the use of <code>site.baseurl</code> to retrieve the font</div>
-
     </p>
   </div>
+
 </div>
 
 
