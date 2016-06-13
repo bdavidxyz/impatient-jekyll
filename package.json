@@ -4,8 +4,8 @@
   "description": "A starter project including full setup for Jekyll 3, GulpJS, SASS, BrowserSync, and Github pages",
   "main": "gulpfile.js",
   "engines": {
-    "node": "~4.1.2",
-    "npm": "~3.7.5"
+    "node": "~5.11.1",
+    "npm": "~3.8.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidb583/impatient-jekyll.git"
+    "url": "https://github.com/bdavidxyz/impatient-jekyll.git"
   },
   "keywords": [
     "jekyll",
@@ -41,5 +41,5 @@
     "github",
     "googlepagespeed"
   ],
-  "homepage": "https://github.com/davidb583/impatient-jekyll/"
+  "homepage": "https://github.com/bdavidxyz/impatient-jekyll/"
 }

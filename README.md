@@ -8,7 +8,7 @@
 
 
 
-## [View demos and full documentation &rarr;](http://davidb583.github.io/impatient-jekyll)
+## [View demos and full documentation &rarr;](http://bdavidxyz.github.io/impatient-jekyll)
 
 ## How to use it
 
@@ -27,7 +27,7 @@ Versions I used : node 4.1.2, npm 3.7.5, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
 
 ```shell
 
-$ git clone https://github.com/davidb583/impatient-jekyll
+$ git clone https://github.com/bdavidxyz/impatient-jekyll
 $ cd impatient-jekyll
 $ npm install
 $ gulp
