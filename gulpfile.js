@@ -95,7 +95,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 */
 gulp.task('jekyll-build-prod', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build', '--config', '_config.yml', '_config.prod.yml'], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', '--config', '_config.yml,_config.prod.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
 gulp.task('optimize-css-prod', ['jekyll-build-prod'], function () {
