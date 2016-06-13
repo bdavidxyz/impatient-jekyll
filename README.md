@@ -9,3 +9,5 @@ width="121" alt="impatient">
 
 
 <h1 align="center">Documentation of Impatient-Jekyll</h1>
+
+## [View website &rarr;](https://bdavidxyz.github.io/impatient-jekyll/)
