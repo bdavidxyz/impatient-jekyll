@@ -13,7 +13,6 @@ var prefix       = require('gulp-autoprefixer');
 var cp           = require('child_process');
 var fs           = require('fs');
 var ghPages      = require('gulp-gh-pages');
-var inlineFonts  = require('gulp-inline-fonts');
 var jekyll       = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages     = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -93,17 +92,6 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
-
-
-
-
-gulp.task('optimize-fonts', function() {
-  return gulp.src(['fonts/aileron/*'])
-    .pipe(inlineFonts({ name: 'Aileron-Regular', style: 'normal', weight: 400, formats: ['otf'] }))
-    .pipe(gulp.dest('public/fonts/'));
-});
-
-
 
 
 
