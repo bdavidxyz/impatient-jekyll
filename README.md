@@ -14,14 +14,11 @@
 
 ### Prerequisite
 
-
- - [Chrome](https://www.google.com/chrome/) - use the installer
+ - [Ruby](https://www.ruby-lang.org/en/downloads/) - use the installer
  - [Jekyll](https://jekyllrb.com/) - ```$ gem install jekyll```
  - [NodeJS](https://nodejs.org/en/download/) - use the installer.
- - [GulpJS](http://gulpjs.com/GulpJS) - ```$ npm install -g gulp ```
 
-
-Versions I used : node 5.11.1, npm 3.8.6, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
+Tested with : node 5.12.0, jekyll 3.1.6, ruby 2.3.0
 
 ### Dev mode
 
@@ -30,7 +27,7 @@ Versions I used : node 5.11.1, npm 3.8.6, gulp 3.9.1, jekyll 3.1.6, ruby 2.3.0
 $ git clone https://github.com/bdavidxyz/impatient-jekyll
 $ cd impatient-jekyll
 $ npm install
-$ gulp
+$ $(npm bin)/gulp
  # ta-da ! the browser launches itself,
  # and will rebuild and live-reload each time you
  # change a CSS, JS, or HTML file
